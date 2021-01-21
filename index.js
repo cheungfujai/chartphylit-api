@@ -9,11 +9,9 @@ let connectionStation = "";
 
 mongoose.connect( "mongodb+srv://devadmin:elT16PlPKurjwqbv@cluster0.eu3sn.mongodb.net/Cluster0?retryWrites=true&w=majority", {
 	useNewUrlParser: true,
-	useUnifiedTopology: true
-	/*,
+	useUnifiedTopology: true,
 	useFindAndModify: false,
 	useCreateIndex: true,
-	*/
 	}, () => {
 		if (mongoose.connection.readyState === 1) connectionStation = "DB connection: Successful";
 		else connectionStation = "DB connection: Failure";
