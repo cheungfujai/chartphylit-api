@@ -5,6 +5,7 @@ const app = express();
 require('dotenv').config({path:'../.env'});
 
 let port = process.env.PORT || 5000;
+let connectionStation = "";
 
 mongoose.connect( "mongodb+srv://devadmin:elT16PlPKurjwqbv@cluster0.eu3sn.mongodb.net/Cluster0?retryWrites=true&w=majority", {
 	useNewUrlParser: true,
@@ -14,7 +15,6 @@ mongoose.connect( "mongodb+srv://devadmin:elT16PlPKurjwqbv@cluster0.eu3sn.mongod
 	useCreateIndex: true,
 	*/
 	}, () => {
-		let connectionStation = "";
 		if (mongoose.connection.readyState === 1) connectionStation = "DB connection: Successful";
 		else connectionStation = "DB connection: Failure";
 		console.log(connectionStation);
@@ -22,7 +22,7 @@ mongoose.connect( "mongodb+srv://devadmin:elT16PlPKurjwqbv@cluster0.eu3sn.mongod
 );
 
 app.get("/", (req, res) => {
-	res.send("Hello World");
+	res.send(connectionStation);
 });
 
 app.listen(port, () => {
