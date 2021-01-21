@@ -7,7 +7,6 @@ require('dotenv').config({path:'../.env'});
 let port = process.env.PORT || 5000;
 let connectionStation = "";
 
-/*
 mongoose.connect( "mongodb+srv://devadmin:elT16PlPKurjwqbv@cluster0.eu3sn.mongodb.net/Cluster0?retryWrites=true&w=majority", {
 	useNewUrlParser: true,
 	useUnifiedTopology: true,
@@ -18,7 +17,7 @@ mongoose.connect( "mongodb+srv://devadmin:elT16PlPKurjwqbv@cluster0.eu3sn.mongod
 		else connectionStation = "DB connection: Failure";
 		console.log(connectionStation);
 	}
-);*/
+);
 
 app.get("/", (req, res) => {
 	res.send(connectionStation);
