@@ -2,8 +2,6 @@ const express = require("express");
 const mongoose = require('mongoose');
 const app = express();
 
-require('dotenv').config({path:'../.env'});
-
 let port = process.env.PORT || 5000;
 let connectionStation = "";
 
