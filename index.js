@@ -1,10 +1,12 @@
 const express = require("express");
 const mongoose = require('mongoose');
 const app = express();
+const cors = require('cors')
 
 let port = process.env.PORT || 5000;
 let connectionStation = "";
 
+app.use(cors());
 mongoose.connect( "mongodb+srv://devadmin:elT16PlPKurjwqbv@cluster0.eu3sn.mongodb.net/Cluster0?retryWrites=true&w=majority", {
 	useNewUrlParser: true,
 	useUnifiedTopology: true,
