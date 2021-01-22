@@ -17,6 +17,15 @@ mongoose.connect( "mongodb+srv://devadmin:elT16PlPKurjwqbv@cluster0.eu3sn.mongod
 	}
 );
 
+app.use((req,res,next)=>{
+    const API_KEY = req.headers["api-key"];
+    if(!req.headers["api-key"] || API_KEY!= "dji24jicxijjwrj543fkomfi&&ew50934nfjs42nn?fah:da1@dsajio-djasidj321kleml"){
+        res.status(401).json({message:"Unauthorized"})
+    }else{
+        next()
+    }
+});
+
 app.get("/", (req, res) => {
 	res.send(connectionStation);
 });
