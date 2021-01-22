@@ -24,3 +24,9 @@ app.get("/", (req, res) => {
 app.listen(port, () => {
 	console.log(`Running on port: ${port}`);
 });
+
+const profileRoutes = require('./routes/profile');
+app.use('/api/profile', profileRoutes);
+
+const QuestionRoutes = require('./routes/question');
+app.use('/api/question', QuestionRoutes);
