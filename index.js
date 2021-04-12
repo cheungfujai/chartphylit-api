@@ -22,8 +22,7 @@ mongoose.connect( "mongodb://127.0.0.1:27017/Chart_phy?retryWrites=true&w=majori
 app.use((req,res,next)=>{
     const API_KEY = req.headers["api-key"];
     if(!req.headers["api-key"] || API_KEY!= "dji24jicxijjwrj543fkomfi&&ew50934nfjs42nn?fah:da1@dsajio-djasidj321kleml"){
-        // res.status(401).json({message:"Unauthorized"})
-		next()
+        res.status(401).json({message:"Unauthorized"})
     }else{
         next()
     }
