@@ -7,7 +7,7 @@ let port = process.env.PORT || 5000;
 let connectionStation = "";
 
 app.use(cors());
-mongoose.connect( "mongodb+srv://devadmin:elT16PlPKurjwqbv@cluster0.eu3sn.mongodb.net/Cluster0?retryWrites=true&w=majority", {
+mongoose.connect( "mongodb://127.0.0.1:27017/Chart_phy?retryWrites=true&w=majority", {
 	useNewUrlParser: true,
 	useUnifiedTopology: true,
 	useFindAndModify: false,
