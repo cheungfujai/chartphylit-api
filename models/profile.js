@@ -24,6 +24,10 @@ const ProfileSchema = new mongoose.Schema({
         type: Number,
         required: true
     },
+    measureUnit: {
+        type: Number,
+        required: true
+    },
     height: {
         type: Number,
         required: true
@@ -52,13 +56,17 @@ const ProfileSchema = new mongoose.Schema({
         type: activityEnum,
         required: true
     },
+    otherActivity: {
+        type: String,
+        required: false
+    },
     daysActivity: {
         type: Number,
         required: true
     },
     durationDaysActivity: {
         type: String,
-        required: true
+        required: false
     },
     sportLevel: {
         type: sportsLevelEnum,
