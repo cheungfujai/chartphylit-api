@@ -65,7 +65,7 @@ const ProfileSchema = new mongoose.Schema({
         required: true
     },
     durationDaysActivity: {
-        type: String,
+        type: [String],
         required: false
     },
     sportLevel: {
