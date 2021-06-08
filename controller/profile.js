@@ -59,7 +59,7 @@ const createProfile = async (req, res) => {
             employment: newProfile.employment,
             yearlyFamilyIncome: newProfile.yearlyFamilyIncome,
             profile: qnatitleArray,
-            title: newProfile.profile
+            title: newProfile.title
         });
         await profile.save();
         return res.status(201).json(profile.profile);

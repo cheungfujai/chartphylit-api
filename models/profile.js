@@ -89,10 +89,10 @@ const ProfileSchema = new mongoose.Schema({
     title: [
         {
             question: {
-                id: Number,
+                id: String,
                 title: String,
-                dimension: {type:dimension,},
-                isActivate: Boolean,
+                dimension: String,
+                // isActivate: Boolean,
                 grading: Number,
             },
             answer: {
